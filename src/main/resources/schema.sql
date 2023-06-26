@@ -26,6 +26,7 @@ CREATE TABLE IF NOT EXISTS post (
     title VARCHAR(150),
     content TEXT,
     "user" INT,
+    tags VARCHAR[],
     post_status post_status_enum DEFAULT 'ACTIVE'
 );
 

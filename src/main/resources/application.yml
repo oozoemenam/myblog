@@ -7,14 +7,18 @@ spring:
   application:
     name: blog
   jpa:
-    show-sql: false
+    show-sql: true
     hibernate:
       ddl-auto: update
     generate-ddl: true
+    properties:
+      hibernate:
+        dialect: org.hibernate.dialect.PostgreSQLDialect
+        format_sql: true
   datasource:
+    url: jdbc:postgresql://localhost:5432/myblog
     username: postgres
     password: ${POSTGRES_PASSWORD}
-    url: jdbc:postgres//localhost:5432/myblog
     driver-class-name: org.postgresql.Driver
 
 logging:
