@@ -1,0 +1,25 @@
+server:
+  port: 8080
+  servlet:
+    context-path: /blog
+
+spring:
+  application:
+    name: blog
+  jpa:
+    show-sql: false
+    hibernate:
+      ddl-auto: update
+    generate-ddl: true
+  datasource:
+    username: postgres
+    password: ${POSTGRES_PASSWORD}
+    url: jdbc:postgres//localhost:5432/myblog
+    driver-class-name: org.postgresql.Driver
+
+logging:
+  level:
+    org.hibernate.SQL: ERROR
+    org.springframework.data: DEBUG
+  file:
+    name: logs/blog.log
