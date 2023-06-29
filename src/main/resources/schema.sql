@@ -46,7 +46,7 @@ CREATE TABLE IF NOT EXISTS "user" (
     activated_at TIMESTAMP DEFAULT (current_timestamp AT TIME ZONE 'UTC')
 );
 
-CREAETE TABLE IF NOT EXISTS comment_like (
+CREATE TABLE IF NOT EXISTS comment_like (
     id BIGSERIAL NOT NULL,
     comment_id INT8,
     post_id INT8,
