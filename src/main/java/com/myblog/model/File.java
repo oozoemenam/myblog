@@ -6,13 +6,13 @@ import lombok.*;
 
 import java.util.Set;
 
+@Entity
 @Data
 @Builder
 @NoArgsConstructor
 @AllArgsConstructor
 @ToString(exclude = {"posts"})
 @EqualsAndHashCode(exclude = {"posts"})
-@Entity
 public class File {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)

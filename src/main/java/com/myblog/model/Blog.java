@@ -8,13 +8,13 @@ import java.io.Serializable;
 import java.time.LocalDateTime;
 import java.util.Set;
 
+@Entity
 @Data
 @Builder
 @NoArgsConstructor
 @AllArgsConstructor
-@ToString(exclude = {"posts"})
-@EqualsAndHashCode(exclude = {"posts"})
-@Entity
+@ToString(exclude = {"posts", "users"})
+@EqualsAndHashCode(exclude = {"posts", "users"})
 public class Blog implements Serializable  {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)

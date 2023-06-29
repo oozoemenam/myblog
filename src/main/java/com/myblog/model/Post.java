@@ -8,13 +8,13 @@ import lombok.*;
 import java.io.Serializable;
 import java.util.Set;
 
+@Entity
 @Data
 @Builder
 @NoArgsConstructor
 @AllArgsConstructor
 @ToString(exclude = {"blog", "user", "files"})
 @EqualsAndHashCode(exclude = {"blog", "user", "files"})
-@Entity
 public class Post implements Serializable {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
